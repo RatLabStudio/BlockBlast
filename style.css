@@ -1,0 +1,123 @@
+:root {
+  --backgroundColor: lightslategray;
+  --boardColor: rgb(70, 79, 88);
+  --spaceColor: rgb(94, 106, 119);
+}
+
+html,
+body {
+  background-color: var(--backgroundColor);
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  user-select: none;
+}
+
+#boardContainer {
+  background-color: var(--spaceColor);
+  border: solid 0.5vh var(--spaceColor);
+  border-radius: 0.5vh;
+  width: fit-content;
+  margin: auto;
+}
+
+.board {
+  background-color: var(--boardColor);
+  height: 60vh;
+  aspect-ratio: 1;
+  margin: auto;
+  border-radius: 0.5vh;
+}
+
+.space {
+  background-color: var(--spaceColor);
+  border-radius: 0.5vh;
+  cursor: pointer;
+  width: 3vh;
+  height: 3vh;
+}
+
+.bit {
+  background-color: lightgray;
+  box-sizing: border-box;
+  width: 78%;
+  height: 78%;
+  margin: auto;
+  outline: outset 1vh gray;
+  border-radius: 0.05vh;
+}
+
+.minibit {
+  background-color: lightgray;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  outline: outset 0.5vh gray;
+  border-radius: 0.05vh;
+  outline-offset: -0.5vh;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.bit-red {
+  background-color: red;
+  outline-color: rgb(185, 0, 0);
+}
+
+.bit-orange {
+  background-color: orange;
+  outline-color: rgb(187, 121, 0);
+}
+
+.bit-yellow {
+  background-color: yellow;
+  outline-color: rgb(167, 167, 0);
+}
+
+.bit-green {
+  background-color: lime;
+  outline-color: rgb(0, 168, 0);
+}
+
+.bit-blue {
+  background-color: aqua;
+  outline-color: rgb(0, 161, 161);
+}
+
+.bit-purple {
+  background-color: rgb(201, 0, 201);
+  outline-color: rgb(168, 0, 168);
+}
+
+#pieceBin {
+    width: 50%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    margin: auto;
+}
+
+.piece {
+  height: 20vh;
+  width: 20vh;
+  border-spacing: 0;
+  margin: auto;
+}
+
+.piece td {
+  height: 1vh;
+  aspect-ratio: 1;
+  margin: 0;
+}
+
+.holding {
+    position: absolute;
+    transform: translate(-25%, -110%);
+    transition: transform 0.2s ease;
+}
+
+.hoverSpace {
+    filter: brightness(150%);
+}
